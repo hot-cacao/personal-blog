@@ -5,6 +5,8 @@ authors: hotcacao
 tags: [welcome]
 ---
 
+![Welcome Banner](./banner.png)
+
 Welcome to Hot Cacao's blog! It's nice to see you here 🥰
 
 <!--truncate-->
