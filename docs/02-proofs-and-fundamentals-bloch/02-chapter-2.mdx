@@ -1,0 +1,25 @@
+---
+sidebar-position: 2
+---
+
+# Chapter 2
+
+## 2.3 Proofs by Contrapositive and Contradiction
+
+### 2.3.2
+
+$\textbf{Problem}$: Let $n$ be an integer. Prove that if $n^2$ is even, then $n$ is even.
+
+$\textit{Proofs}$. Let $n \in \mathbb{Z}$. Assume that $n$ is odd. Then there exists some integer $k$ such that $n = 2k + 1$. Hence,
+
+$$
+n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1.
+$$
+
+Since $2(2k^2 + 2k) + 1$ is in the form $2m + 1$ for some integer $m$, it follows that $n^2$ is odd. By contrapositive, we conclude that if $n^2$ is even, then n must be even. $\square$
+
+### 2.3.3
+
+$\textbf{Problem}$: Let $a, b, \text{ and } c$ be integers. Show that if $a$ does not divide $bc$, then $a$ does not divide $b$.
+
+$\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Assume that $a \mid b$. Then there exists some integer $k$ such that $ak = b$. Hence, $akc = bc$. Since $ak$ is divisible by $b$, it follows that $akc$ is also divisible by $b$. By contrapositive, we conclude that if $a \nmid bc$, then $a \nmid b$. $\square$
