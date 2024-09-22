@@ -20,7 +20,7 @@ Since $2(2k^2 + 2k) + 1$ is in the form $2m + 1$ for some integer $m$, it follow
 
 ### 2.3.3
 
-$\textbf{Problem}$: Let $a, b, \text{ and } c$ be integers. Show that if $a$ does not divide $bc$, then $a$ does not divide $b$.
+$\textbf{Problem}$: Let $a, b,$ and $c$ be integers. Show that if $a$ does not divide $bc$, then $a$ does not divide $b$.
 
 $\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Assume that $a \mid b$. Then there exists some integer $k$ such that $ak = b$. Hence, $akc = bc$. Since $ak$ is divisible by $b$, it follows that $a$ is also divisible by $bc$. By contrapositive, we conclude that if $a \nmid bc$, then $a \nmid b$. $\square$
 
@@ -38,7 +38,7 @@ since $\frac{a}{b}$ is a rational and $\frac{1}{n}$ is rational. We can easily p
 
 ### 2.3.5
 
-$\textbf{Problem}$: Let $a, b, \text{ and } c$ be integers. Suppose that there is some integer $d$ such that $d \mid a$ and $d \mid b$, but that d does not divide c. Show that the equation $ax + by = c$ has no solution such that $x \text{ and } y$ are integer.
+$\textbf{Problem}$: Let $a, b,$ and $c$ be integers. Suppose that there is some integer $d$ such that $d \mid a$ and $d \mid b$, but that d does not divide c. Show that the equation $ax + by = c$ has no solution such that $x$ and $y$ are integer.
 
 $\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Suppose that $d \mid a$, $d \mid b$, $d \nmid c$, and $ax + by = c$ has a solution such that $x, y \in \mathbb{Z}$.
 
@@ -47,3 +47,37 @@ $d \mid b \implies dl = b$ ($l \in \mathbb{Z}$) \
 $\implies dkx + dly = c \iff d(kx + ly) = c \iff kx + ly = \frac{c}{d}$
 
 However, $d \nmid c$ which make $\frac{c}{d}$ not an integer, while we can easily prove the result of kx + ly is an integer. By contradiction, we conclude that if $d \mid a$, $d \mid b$, $d \nmid c$, then $ax + by = c$ has no solution such that $x, y \in \mathbb{Z}$. $\square$
+
+### 2.3.6
+
+$\textbf{Problem}$: Let $c$ be a positive integer that is not a prime number. Show that there is some positive integer $b$ such that $b \mid c$ and $b \le \sqrt{c}$
+
+$\textit{Proofs}$. Suppose that $c \in \mathbb{Z}^+$, $c$ is not a prime, and there is no such $b$ that $b \mid c$ and $b \le \sqrt{c}$. For any positive number $c$, there exists b = 1 which satisfied $b \mid c$ and $b \le \sqrt{c}$. By contradiction, we conclude that if $c \in \mathbb{Z}^+$, then there is some $b \in \mathbb{Z}^+$ that satisfied $b \mid c$ and $b \le \sqrt{c}$. $\square$
+
+### 2.3.7
+
+$\textbf{Problem}$: Let $q$ be a positive integer such that $q \ge 2$ and such that for any integer $a$ and $b$, if $q \mid ab$ then $q \mid a$ or $q \mid b$. Show that $\sqrt{q}$ is irrational.
+
+$\textit{Proofs}$. Let $q \in \mathbb{Z}$ and $q \ge 2$. Suppose that $\sqrt{q}$ is rational. Then, $\sqrt{q} = \frac{n}{m}$ for some $n, m \in \mathbb{Z}$ and $\gcd(n, m) = 1$.
+
+$\sqrt{q} = \frac{n}{m}$ \
+$\implies q = \frac{n^2}{m^2}$ \
+$\implies qm^2 = n^2$ \
+$\implies q \mid n^2$ \
+$\implies q \mid n$ (since if $q \mid ab$ then $q \mid a$ or $q \mid b$) \
+$\implies qt = n$ ($t \in \mathbb{Z}$)
+
+Plug $qt = n$ back into $qm^2 = n^2$. We have $m^2 = qt^2$. This implies $qt^2 \mid m^2$ in which we assume $\gcd(n, m) = 1$. By contradiction, for $q \in \mathbb{Z}$ and $q \ge 2$ which satisfied $q \mid ab$ then $q \mid a$ or $q \mid b$, then $\sqrt{q}$ is irrational. $\square$
+
+### 2.3.8
+
+$\textbf{Problem}$: Let $q$ be a positive integer such that $q \ge 2$ and such that for any integer $a$ and $b$, if $q \mid ab$ then $q \mid a$ or $q \mid b$. Show that $q$ is a prime number.
+
+$\textit{Proofs}$. Let $q \in \mathbb{Z}$ and $q \ge 2$. Suppose that q is a composite number. Then we can write $q = nm$ for some $n, m \in \mathbb{Z}$ and $n, m > 1$.
+
+$q = nm$ \
+$\implies q \mid nm$ \
+$\implies q \mid n$ \
+$\implies qk = n$ for some $k \in \mathbb{Z}$
+
+Plug $q = nm$ into $qk = n$. We have $nmk = n$, which $k = \frac{1}{m}$. And $m > 1$. which contradict with $k \in \mathbb{Z}$. The same can be prove with $q \mid m$. By contradiction, for $q \in \mathbb{Z}$ and $q \ge 2$ which satisfied $q \mid ab$ then $q \mid a$ or $q \mid b$, then $q$ is a prime number. $\square$
