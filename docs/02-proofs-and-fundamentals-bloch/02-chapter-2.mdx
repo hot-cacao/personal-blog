@@ -28,4 +28,22 @@ $\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Assume that $a \mid b$. Then th
 
 $\textbf{Problem}$: Show that the product of a non-zero rational number and an irrational number is irrational.
 
-$\textit{Proofs}$. Let $n$ be a non-zero rational $m$ be an irrational. Assume that $nm$ is rational. Then $nm = \frac{a}{b}$ ($a, b \in \mathbb{Z}$). So, $m = \frac{a}{bn}$ which is a rational number. By contrapositive, we conclude that for $n$ be a non-zero rational $m$ be an irrational, $nm$ will be irrational. $\square$
+$\textit{Proofs}$. Let $n$ be a non-zero rational, m be an irrational. Suppose that $n \in \mathbb{Q}$, $m$ is an irrational, and $nm$ is rational. Then, we can write $nm = \frac{a}{b}$ for some $a, b \in \mathbb{Z}$. $\square$
+
+$$
+nm = \frac{a}{b} \iff m = \frac{a}{bn}
+$$
+
+since $\frac{a}{b}$ is a rational and $\frac{1}{n}$ is rational. We can easily prove that the product of these two numbers are rational. This contradict with our assumption that $m$ is irrational. By contradiction, we conclude that the product of non-zero rational and irrational is irrational. $\square$
+
+### 2.3.5
+
+$\textbf{Problem}$: Let $a, b, \text{ and } c$ be integers. Suppose that there is some integer $d$ such that $d \mid a$ and $d \mid b$, but that d does not divide c. Show that the equation $ax + by = c$ has no solution such that $x \text{ and } y$ are integer.
+
+$\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Suppose that $d \mid a$, $d \mid b$, $d \nmid c$, and $ax + by = c$ has a solution such that $x, y \in \mathbb{Z}$.
+
+$d \mid a \implies dk = a$ ($k \in \mathbb{Z}$) \
+$d \mid b \implies dl = b$ ($l \in \mathbb{Z}$) \
+$\implies dkx + dly = c \iff d(kx + ly) = c \iff kx + ly = \frac{c}{d}$
+
+However, $d \nmid c$ which make $\frac{c}{d}$ not an integer, while we can easily prove the result of kx + ly is an integer. By contradiction, we conclude that if $d \mid a$, $d \mid b$, $d \nmid c$, then $ax + by = c$ has no solution such that $x, y \in \mathbb{Z}$. $\square$
