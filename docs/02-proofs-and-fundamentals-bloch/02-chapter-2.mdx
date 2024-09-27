@@ -28,7 +28,7 @@ $\textit{Proofs}$. Let $a, b, c \in \mathbb{Z}$. Assume that $a \mid b$. Then th
 
 $\textbf{Problem}$: Show that the product of a non-zero rational number and an irrational number is irrational.
 
-$\textit{Proofs}$. Let $n$ be a non-zero rational, m be an irrational. Suppose that $n \in \mathbb{Q}$, $m$ is an irrational, and $nm$ is rational. Then, we can write $nm = \frac{a}{b}$ for some $a, b \in \mathbb{Z}$. $\square$
+$\textit{Proofs}$. Let $n$ be a non-zero rational, m be an irrational. Suppose that $n \in \mathbb{Q}$, $m$ is an irrational, and $nm$ is rational. Then, we can write $nm = \frac{a}{b}$ for some $a, b \in \mathbb{Z}$.
 
 $$
 nm = \frac{a}{b} \iff m = \frac{a}{bn}
@@ -81,3 +81,281 @@ $\implies q \mid n$ \
 $\implies qk = n$ for some $k \in \mathbb{Z}$
 
 Plug $q = nm$ into $qk = n$. We have $nmk = n$, which $k = \frac{1}{m}$. And $m > 1$. which contradict with $k \in \mathbb{Z}$. The same can be prove with $q \mid m$. By contradiction, for $q \in \mathbb{Z}$ and $q \ge 2$ which satisfied $q \mid ab$ then $q \mid a$ or $q \mid b$, then $q$ is a prime number. $\square$
+
+## 2.4 Cases, and If and Only If
+
+### 2.4.1
+
+$\textbf{Problem}$: Outline the strategy for a proof of each of the following statements (do not prove them, since the terms are meaningless). \
+(1) If an integer is combustible then it is even or prime. \
+(2) A 2 x 2 matrix is collapsible iff its determinant is greater than 3. \
+(3) For an integer to be putrid, it is necessary and sufficient that it is both odd and divisible by 50. \
+(4) Let $n$ be an integer. The following are equivalent: (a) the integer $n$ is composite and greater than 8; (b) the integer $n$ is suggestive; (c) the integer $n$ is indifferent or fragile.
+
+$\textit{Solution}$. \
+(1) Divide into 2 cases: Prove integer is combustible and it is not even then it is prime. And, integer is combustible and it is not prime then it is even. \
+(2) Divide into 2 cases: Prove 2 x 2 matrix is collapsible then its determinant is greater than 3. And, if its determinant is greater than 3 then 2 x 2 matrix is collapsible. \
+(3) Divide into 2 cases: Prove that an integer is putrid then it is both odd and divisible by 50. And, if it is both odd and divisible by 50 then the integer is putrid. \
+(3) We will use transitive and try to prove (a) $\implies$ (b), (b) $\implies$ (c), and (c) $\implies$ (a).
+
+### 2.4.2
+
+$\textbf{Problem}$: Let $a, b$ and $c$ be integer such that $c \ne 0$. Show that $a \mid b$ iff $ac \mid bc$.
+
+$\textit{Proof}$. Let $a, b, c \in \mathbb{Z}$, and $c \ne 0$. \
+If $a \mid b \implies ak = b \implies akc = bc$ for some $k \in \mathbb{Z}$ where $\frac{bc}{ac} = k$ which is an integer. This prove that if $a \mid b$, then $ac \mid bc.$ \
+If $ac \mid bc \implies atc = bc \implies at = b$ fro some $t \in \mathbb{Z}$ where $\frac{b}{a} = t$ which is an integer. This prove that if $ac \mid bc$, then $a \mid b.$ \
+From these two cases, we can conclude that $a \mid b$ iff $ac \mid bc.$ $\square$
+
+### 2.4.3
+
+$\textbf{Problem}$: Let $a$ and $b$ be integers. We say that $a$ and $b$ are relatively prime if the following condition holds: if $n$ is an integer such that $n \mid a$ and $n \mid b$, then $n \pm 1$ \
+(1) Find two integer $a$ and $b$ that are relatively prime. Find two integer $c$ and $d$ that are not relatively prime. \
+(2) Suppose that $a$ and $b$ are positive. Show that the following are equivalent. \
+(i) $a$ and $b$ are relatively prime.
+(ii) $a + b$ and $b$ are relatively prime.
+(iii) $a$ and $a + b$ are relatively prime.
+
+$\textit{Solution}$. \
+(1) $a = 2, c = 3$ are relatively prime. $c = 2, d = 4$ are not relative prime.
+
+(2) \
+$\textit{Proof}$. \
+$\textbf{Case}$ (i) $\implies$ (ii): \
+Suppose that $a + b$ and $b$ are not relatively prime then there exist an integer $n \ne \pm 1$ such that $n \mid a + b$ and $n \mid b$. Then we can write: \
+$a + b = nk$ and $b = nl$. In which $a = nk - nl = n(k - l)$. This make $a$ and $b$ are not relatively prime. By contrapositive, we can conclude that if $a$ and $b$ are relatively prime then $(a + b)$ and $b$ are relatively prime. \
+$\textbf{Case}$ (ii) $\implies$ (i): \
+Suppose that $a$ and $b$ are not relatively prime then there exist an integer $n \ne \pm 1$ such that $n \mid a$ and $n \mid b$. Then we can write: \
+$a = nk$ and $b = nl$. In which $a + b = nk + nl = n(l + k)$. This make $a + b$ and $b$ are not relatively prime. By contrapostive, we can conclude that if $a + b$ and $b$ are relatively prime then $a$ and $b$ are relatively prime. \
+Because a and b are interchangeable then the same thing can be done with (i) $\iff$ (iii). \
+$\textbf{From the cases above}$: We can conclude that (i), (ii), and (iii) are equivalent. $\square$
+
+### 2.4.4
+
+$\textbf{Problem}$: Let $n$ be an integer. Show that one of the two number $n$ and $n + 1$ is even, then the other is odd.
+
+$\textit{Proof}$. \
+$\textbf{Case 1}$: $n$ is odd \
+If $n$ is odd, then $n = 2k + 1$ for some $k \in \mathbb{Z}$. Hence, $n + 1 = 2k + 2 = 2(k + 1)$ which is in the form of $2m$ for some $m \in \mathbb{Z}$ which is an even number. We can conclude that if $n$ is odd then $n$ is odd then $n + 1$ is even. \
+$\textbf{Case 2}$: $n$ is even \
+If $n$ is even then $n = 2k$ for some $k \in \mathbb{Z}$. Hence, $n + 1 = 2k + 1$ which is an odd number. We can conclude that if $n$ is even then $n + 1$ is odd. \
+$\textbf{From the cases above}$: We can conclude that if $n$ is an integer, then one of the two numbers $n$ and $n + 1$ is even, and the other is odd. $\square$
+
+### 2.4.5
+
+$\textbf{Problem}$: This exercise make use of the definition given in Exercise 2.2.5. It can be shown that if $n$ is an integer, then precisely one of the following holds: either $n = 3k$ for some integer $k$, or $n = 3k + 1$ for some integer $k$, or $n = 3k + 2$ for some integer $k$. Let $n$ and $m$ be integers. \
+(1) Suppose that $n$ is a multiple of 3 and that $m$ is not a multiple of 3. Show that $n + m$ is not a multiple of 3. \
+(2) Show that $mn$ is a multiple of 3 iff $m$ or $n$ is a multiple of 3.
+
+(1) \
+$\textit{Proof}$. \
+Let $n$ is a mulitple of 3 and $m$ is not a multiple of 3 then $m = 3l + 1$ or $m = 3l + 2$ for some $l \in \mathbb{Z}$. \
+$\textbf{Case 1}$: $m = 3l + 1$ \
+If $n = 3k$, $m = 3l + 1$ for some $k \in \mathbb{Z}$, $n + m = 3k + 3l + 1 = 3(k + l) + 1$ which is not divisible by 3. \
+$\textbf{Case 2}$: $m = 3l + 2$ \
+If $n = 3k$, $m = 3l + 2$ for some $k \in \mathbb{Z}$, $n + m = 3k + 3l + 2 = 3(k + l) + 2$ which is not divisible by 3. \
+$\textbf{From the cases above}$: We can conclude that if $n$ is a multiple of three and $m$ is not, then $n + m$ is not a multiple of 3. $\square$
+
+(2) \
+$\textit{Proof}$. \
+$\textbf{Case}$: $nm$ is a multiple of 3, then $n$ or $m$ is a multiple of 3 \
+If $n$ and $m$ is not a multiple of 3 then there is 3 cases: $n = 3k + 1$, $m = 3l + 1$ or $n = 3k + 2$, $m = 3l + 2$ or $n = 3k + 1$, $m = 3l + 2$ for some $k, l \in \mathbb{Z}$ \
+$\textbf{Case 1}$: $n = 3k + 1, m = 3l + 1$ \
+If $n = 3k + 1, m = 3l + 1$, then $nm = (3k + 1)(3l + 1) = 3(3kl + k + l) + 1$ (1) \
+$\textbf{Case 2 and 3}$ can be easily proving with the step using in case (1). \
+By contrapostive, we can prove that if $nm$ is a multiple of 3, then $n$ or $m$ is a multiple of 3
+
+$\textbf{Case}$: $n$ or $m$ is a multiple of 3, then $nm$ is a multiple of 3 \
+Suppose that $n$ or $m$ is a multiple of 3, and $nm$ is not a multiple of 3. There is 2 cases since $n$ and $m$ is interchangeable: $n = 3k$, $m = 3l + 1$ or $n = 3k$, $m = 3l + 2$ for some $k, l \in \mathbb{Z}$ \
+$\textbf{Case 1}$: $n = 3k, m = 3l + 1$ \
+If $n = 3k, m = 3l + 1$ then $nm = 3k(3l + 1) = 3(3kl + k)$. (1)
+$\textbf{Case 2}$ can be easily proving with the step using in case (1). \
+By contradiction, we can prove that if $n$ or $m$ is a multiple of 3, then $nm$ is a multiple of 3
+
+$\textbf{From the case above}$: We can conclude that $mn$ is a multiple of 3 iff $m$ or $n$ is a multiple of 3. $\square$
+
+### 2.4.6
+
+$\textbf{Problem}$: Find all triples of numbers $p$, $p + 2$, $p + 4$ such that all three numbers are prime numbers. Prove that you have all such triples.
+
+The only 3 triple are $3, 5, 7$.
+
+$\textit{Proof}$. Since prime numbers can't be negative, and the smallest prime start from 2, so $p \ge 2$ \
+$\textbf{Case}$: For every even number $p$, $p \ge 2$, $p + 2$ can always be divide by $2$. \
+$\textbf{Case}$: For every odd number $p$, $p \ge 2$. Suppose that there exist other triples $\ne 3, 5, 7$ that is prime number. Since $p \ne 3, 5, 7$, then $3 \nmid p$. Which implies that $p$ has the form of $3k + 1$ or $3k + 2$ for some $k \in \mathbb{Z}$. In the case of $3k + 1$, $p + 2$ and $p + 4$ will consecutively have the form of $3k + 3$ and $3k + 5$. In which $3 \mid 3k + 3$. In the case of $3k + 2$, $p + 2$ and $p + 4$ will consecutively have the form of $3k + 4$ and $3k + 6$. In which $3 \mid 3k + 6$. By contradiction, we can not find any triples $\ne 3, 5, 7$.
+
+$\textbf{From the case above}$: We can conclude that $3, 5, 7$ is the only prime numbers have the forms of $p, p + 2, p + 4$. $\square$
+
+### 2.4.7
+
+$\textbf{Problem}$: Let $n$ be an odd integer. Show that precisely one of the following holds: either $n = 4k$ for some integer $k$, or $n = 4k + 1$ for some integer $k$, or $n = 4k + 2$ for some integer $k$, or $n = 4k + 3$ for some integer $k$.
+
+$\textit{Proof}$.
+Let n be an odd integer, all 4 case above is all the possible integers can be made since it's include all the $4 \mid n$ and $4 \nmid n$. By that fact, we can conclude that n belongs to one of those 4 cases. $\square$
+
+### 2.4.8
+
+$\textbf{Problem}$: Let $n$ be an odd integer. Show that there is an integer $k$ such that $n^2 = 8k + 1$.
+
+$\textit{Proofs}$.
+Let $n$ be an odd integer. $n = 2l + 1$ for some $l \in \mathbb{Z}$. Then, $n^2 = (2l + 1)^2 = 4(l^2 + l) + 1$. \
+$\textbf{Case 1}$: If $l$ is odd then $l^2$ is odd then $l^2 + l$ is even. \
+$\textbf{Case 2}$: If $l$ is even then $l^2$ is even then $l^2 + l$ is even. \
+We can write $l^2 + l = 2k$ for some $k \in \mathbb{Z}$. Then $n^2 = 8k + 1$. $\square$
+
+## 2.5 Quantifiers in Theorems
+
+### 2.5.1
+
+$\textbf{Problem}$: Convert the following statements, which do not have their quantifiers explicitly given, into statements with explicit quantifiers (do not prove them, since the terms are menaingless). \
+(1) If a 5 x 5 matrix has postive determinant then it is bouncy. \
+(2) There is a crusty integer that is greater than 7. \
+(3) For each integer $k$, there is an opulent integer $w$ such that $k \mid w$. \
+(4) There is a fibrous 2 x 2 matrix $P$ such that det $P > m$, for each ribbed integer $m$. \
+(5) Some 2 x 2 matrix $M$ has the property that every subtle integer divide tr $M$.
+
+$\textit{Solution}$. \
+(1) $x$: 5x5 matrix, $P(x)$: $x$ has postive determinant, $Q(x)$: $x$ is bouncy. \
+$\implies$ $\forall x (P(x) \rightarrow Q(x))$ \
+(2) $x$: crusty integer, $P(x)$: $x$ is greater than 7. \
+$\implies$ $\exists x P(x)$ \
+(3) $k$: integer, $w$ opulent integer, $P(k, w)$: $k \mid w$ \
+$\implies$ $\forall k \exists w P(k, w)$ \
+(4) $P$: fibrous 2 x 2 matrix, $m$: ribbed integer, $Q(x, m)$: det $P > m$ \
+$\implies$ $\forall m \exists P (Q(P, m))$ \
+(5) $x$: 2 x 2 matrix, $y$: subtle integer, $P(x, y)$: $x$ has the property that $y$ divide tr $x$ \
+$\implies$ $\exists x \forall y P(x, y)$
+
+### 2.5.2
+
+$\textbf{Problem}$: A problem that might be given in a high school mathematics class is "Show that the equation $e^x = 5$ has a unique solution." We could rewrite the problem as "Show that there exists a unique real number $x$ such that $e^x = 5$." First write up a solution to the problem as would be typically found in a high school class. Then write up a proper solution to the problem, using the ideas discussed in this section. Write up the uniqueness part of the proof first, without making use of existence part of the proof; avoid a backwards proof when showing existence. Do not use a calculator (the number x does not have to be given explicitly in decimal expansion).
+
+$\textit{Solution}$. \
+$\textit{High school proof}$.
+
+$$
+\begin{align*}
+e^x &= 5 \\
+\log_e e^x &= \log_e 5 \\
+x &= \log_e 5
+\end{align*}
+$$
+
+There is an unique solution in which $x = \log_e 5$
+
+$\textit{Proof}$. \
+$\textbf{Uniqueness}$:
+Suppose that there exists at least 2 solutions called $x_1$, $x_2$. Then, $e^{x_1} = 5$ and $e^{x_2} = 5 \rightarrow e^{x_1} = e^{x_2}$
+
+$$
+\begin{align*}
+e^{x_1} &= e^{x_2} \\
+\log_e e^{x_1} &= \log_e e^{x_2} \\
+x_1 &= x_2
+\end{align*}
+$$
+
+Since $x_1 = x_2$, then the solution of $e^x = 5$ has an unique solution.
+
+$\textbf{Existence}$:
+Let $x = \log_e 5$. Plug $x$ back into $e^x$ will give the result of 5.
+
+We can conclude that there exists an unique real number $x$ such that $e^x = 5$. $\square$
+
+### 2.5.3
+
+$\textbf{Problem}$: Prove or give a counterexample to each of the following statements. \
+(1) For each non-negative number $s$, there exists a non-negative number $t$ such that $s \ge t$. \
+(2) There exists a non-negative number $t$ such that for all non-negative number $s$, we have $s \ge t$. \
+(3) For each non-negative number $t$, there exists a non-negative number $s$ such that $s \ge t$. \
+(4) There exists a non-negative number $s$ such that for all non-negative numbers $t$, we have $s \ge t$.
+
+$\textit{Solution}$. \
+(4) is wrong. Let $s$ is a really large number $x$. Because t is every non-negative number, then $t = x + 1$ will make $t > s$ \
+We can simplified this as $s, t$: non-negative number, $P(s, t)$: $s \ge t$. \
+(1) $\forall s \exists t P(s, t)$ \
+Let $s$ be an arbitrary non-negative number called $x$ then $t = x$ will satisfied $s \ge t$ \
+(2) $\exists t \forall s P(s, t)$ \
+Since $s$ is a non-negative numbers. This make $s \ge 0$. Let $t = 0$, this will always satisfied the equation $s \ge t$. \
+(3) $\forall t \exists s P(s, t)$ \
+Let $t$ be an arbitrary non-negative number called $x$ then $s = x$ will satisfied $s \ge t$
+
+### 2.5.4
+
+$\textbf{Problem}$: Prove or give a counter example to each of the following statements. \
+(1) For each integer $a$, there exists an integer $b$ such that $a \mid b$ \
+(2) There exists an integer $b$ such that for all integers $a$, we have $a \mid b$ \
+(3) For each integer $b$, there exists an integer $a$ such that $a \mid b$ \
+(4) There exists an integer $a$ such that for all integers $b$, we have $a \mid b$
+
+### 2.5.5
+
+$\textbf{Problem}$: Prove or give a counter example to each of the following statements. \
+(1) For each real number $x$, there exists a real number $y$ such that $e^x - y > 0$. \
+(2) There exists a real number $y$ such that for all real numbers $x$, we have $e^x - y > 0$. \
+(3) For each real number $y$, there exists a real number $x$ such that $e^x - y > 0$. \
+(4) There exists a real number $x$ such that for all real number $y$, we have $e^x - y > 0$.
+
+### 2.5.6
+
+$\textbf{Problem}$: Prove or give a counterexample to the following statement: For each positive integer $a$, there exists a positive integer $b$ such that
+
+$$
+\frac{1}{2b^2 + b} < \frac{1}{ab^2}
+$$
+
+### 2.5.7
+
+$\textbf{Problem}$: Prove or give a counterexample to the following statement: For every real number $y$, there is a real number $x$ such that $e^{3x} + y = y^2 - 1$.
+
+### 2.5.8
+
+$\textbf{Problem}$: Prove or give a counterexample to the following statement: For each real number $p$, there exist a real number $q$ and $r$ such that $q\sin(r/5) = p$
+
+### 2.5.11
+
+$\textbf{Problem}$: A student is asked to show that the equation $x(x - 1) = 2(x + 2)$ has a solution. In the context of writing rigorous proofs, what is wrong with the following solution she handed in?
+
+"Proof:
+
+$$
+\begin{align*}
+x(x - 1) &= 2(x + 2) \\
+x^2 - x &= 2x + 4 \\
+x^2 - 3x - 4 &= 0 \\
+(x - 4)(x + 1) &= 0
+\end{align*} \\
+x = 4 \text{ or } x = -1
+$$
+
+Thus there are two solutions."
+
+## 2.6 Writing mathematics
+
+### 2.6.1
+
+$\textbf{Problem}$: State what is wrong with each of the following write-ups; some have more than one error. \
+(1) We make use of the fact about the real numbers that if $x > 0, x^2 > 0$. \
+(2) To solve $x^2 + 6x = 16$:
+
+$$
+x^2 + 6x = 16 \\
+x^2 + 6x - 16 = 0 \\
+(x - 2)(x + 8)  = 0
+$$
+
+and $x = 2$, $x = -8$. \
+(3) In order to solve $x^2 + 6x = 16$, then $x^2 + 6x - 16 = 0$, $(x - 2)(x + 8) = 0$, and thus $x = 2$, $x = -8$. \
+(4) We want to solve the equation $x^2 - 2x = x + 10$. then $x^2 - 3x - 10$, so $(x - 5)(x + 2)$, so 5 and -2. \
+(5) We want to multiply the two polynomials $(7 + 2x)$ and $(y^2 + 5y -6)$, which we do by computing
+
+$$
+(7 + 2y)(y^2 + 5y - 6) \\
+7y^2 + 35y - 42 + 2y^3 + 10y^2 -12y \\
+2y^3 + 17y^2 + 23y - 42
+$$
+
+the answer is $2y^3 + 17y^2 + 23y - 42$. \
+(6) We say that a real number $x$ is gloppy if there is some integer $n$ such that $x^2 - n$ is sloppy. Suppose that $x$ is gloppy. Since $n$ is an integer, then its square is an integer, ... (The terms here are meaningless.) \
+(7) Let $x$ be a real number. Then $x^2 \ge 0$ for all real number $x$, ...
+(8) It is know that $\sqrt{a} < a$ for all $a > 1$. Thus $\sqrt{a} + 3 < a + 3$. Hence $(\sqrt{a} + 3)^2 < (a + 3)^2
