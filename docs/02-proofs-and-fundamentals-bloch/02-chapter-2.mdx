@@ -288,6 +288,17 @@ $\textbf{Problem}$: Prove or give a counter example to each of the following sta
 (3) For each integer $b$, there exists an integer $a$ such that $a \mid b$ \
 (4) There exists an integer $a$ such that for all integers $b$, we have $a \mid b$
 
+$\textit{Solution}$. \
+We can simplified this as $a, b$: integer, $P(a, b)$: $a \mid b$. \
+(1) $\forall a \exists b P(a, b)$ \
+Let $b = a$, $a \mid b$ is satisfied. \
+(2) $\exists b \forall a P(a, b)$ \
+Let $b = 0$, then for any integer $a$, there is a $k = 0$ that will make $0a = b$. \
+(3) $\forall b \exists a P(a, b)$ \
+Let $a = b$, $a \mid b$ is satisfied. \
+(4) $\exists a \forall b P(a, b)$ \
+Let $a = 1$, then for any integer $b$, there is a $k = b$ that will make $ka = b$.
+
 ### 2.5.5
 
 $\textbf{Problem}$: Prove or give a counter example to each of the following statements. \
@@ -295,6 +306,17 @@ $\textbf{Problem}$: Prove or give a counter example to each of the following sta
 (2) There exists a real number $y$ such that for all real numbers $x$, we have $e^x - y > 0$. \
 (3) For each real number $y$, there exists a real number $x$ such that $e^x - y > 0$. \
 (4) There exists a real number $x$ such that for all real number $y$, we have $e^x - y > 0$.
+
+$\textit{Solution}$. \
+We can simplified this as $x, y$: real number, $P(x, y)$: $e^x - y > 0$ \
+(1) $\forall x \exists y P(x, y)$ \
+For every real number $x$, $y = 0$ will make $e^x$ always larger than 0. \
+(2) $\exists y \forall x P(x, y)$ \
+Let $y = 0$, so for every real number $x$, $e^x$ always larger than 0. \
+(3) $\forall y \exists x P(x, y)$ \
+Since both $e^x$ and $y$ is incremental. Which means for any $y$, there exists a number for $x$ that makes $e^x > y$. \
+(4) $\exists x \forall y P(x, y)$ \
+Assume $x$ is arbitrary. Then, let $y = e^x + 1$, then $e^x - y = -1$ which is not $> 0$
 
 ### 2.5.6
 
@@ -304,13 +326,26 @@ $$
 \frac{1}{2b^2 + b} < \frac{1}{ab^2}
 $$
 
+$\textit{Solution}$. \
+Let $a = 5$, then the equation becomes $\frac{1}{2b^2 + b} < \frac{1}{5b^2} \implies 5b^2 < 2b^2 + b \implies b(3b - 1) < 0$. $b$ is a positive integer so $b > 0$ and $3b - 1 > 0$. This contradict with our statement.
+
 ### 2.5.7
 
 $\textbf{Problem}$: Prove or give a counterexample to the following statement: For every real number $y$, there is a real number $x$ such that $e^{3x} + y = y^2 - 1$.
 
+$\textit{Solution}$. \
+Rearrange $e^{3x} = y^2 - y - 1$. Plug $y = \frac{1 + \sqrt{5}}{2}$. This make the left hand side equal to 0. On the right hand side, $e^{3x} > 0$ for any real number $x$. This contradict with our statement
+
 ### 2.5.8
 
 $\textbf{Problem}$: Prove or give a counterexample to the following statement: For each real number $p$, there exist a real number $q$ and $r$ such that $q\sin(r/5) = p$
+
+$\textit{Proof}$. \
+We will divide the problem into 2 cases which is $p = 0$ and $p \ne 0$ \
+$\textbf{Case 1}$: If $p = 0$, then either $q = 0$ or $\sin(r/5) = 0$ will satisfy our equations. \
+$\textbf{Case 2}$: If $p \ne 0$, then $q \ne 0$ and $r \ne 5 \pi t$ $(t \in \mathbb{Z})$. \
+We will have $q = \frac{p}{\sin(r/5)}$ if we define our $r$ first or $r = 5\arcsin(\frac{p}{q})$ if we define our $q$ first.
+$\textbf{From these two cases}$, we can assume that for each real number $p$, there exist a real number $q$ and $r$ such that $q\sin(r/5) = p$
 
 ### 2.5.11
 
@@ -330,32 +365,4 @@ $$
 
 Thus there are two solutions."
 
-## 2.6 Writing mathematics
-
-### 2.6.1
-
-$\textbf{Problem}$: State what is wrong with each of the following write-ups; some have more than one error. \
-(1) We make use of the fact about the real numbers that if $x > 0, x^2 > 0$. \
-(2) To solve $x^2 + 6x = 16$:
-
-$$
-x^2 + 6x = 16 \\
-x^2 + 6x - 16 = 0 \\
-(x - 2)(x + 8)  = 0
-$$
-
-and $x = 2$, $x = -8$. \
-(3) In order to solve $x^2 + 6x = 16$, then $x^2 + 6x - 16 = 0$, $(x - 2)(x + 8) = 0$, and thus $x = 2$, $x = -8$. \
-(4) We want to solve the equation $x^2 - 2x = x + 10$. then $x^2 - 3x - 10$, so $(x - 5)(x + 2)$, so 5 and -2. \
-(5) We want to multiply the two polynomials $(7 + 2x)$ and $(y^2 + 5y -6)$, which we do by computing
-
-$$
-(7 + 2y)(y^2 + 5y - 6) \\
-7y^2 + 35y - 42 + 2y^3 + 10y^2 -12y \\
-2y^3 + 17y^2 + 23y - 42
-$$
-
-the answer is $2y^3 + 17y^2 + 23y - 42$. \
-(6) We say that a real number $x$ is gloppy if there is some integer $n$ such that $x^2 - n$ is sloppy. Suppose that $x$ is gloppy. Since $n$ is an integer, then its square is an integer, ... (The terms here are meaningless.) \
-(7) Let $x$ be a real number. Then $x^2 \ge 0$ for all real number $x$, ... \
-(8) It is know that $\sqrt{a} < a$ for all $a > 1$. Thus $\sqrt{a} + 3 < a + 3$. Hence $(\sqrt{a} + 3)^2 < (a + 3)^2$
+$\textit{Solution}$. She hand in a backward solution. And she only need to give one solution and plug it back to the equation to prove it have a solution.
